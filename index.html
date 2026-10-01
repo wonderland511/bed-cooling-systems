@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="color-scheme" content="dark light">
+<title>Охлаждение кровати: две системы</title>
+<style>
+:root{
+  --bg:#0b0c0f; --bg2:#121419; --card:#16181e; --card2:#1c1f27; --line:rgba(255,255,255,.08);
+  --text:#f2f3f5; --muted:#9aa0ab; --accent:#5ab0ff; --accent2:#7ee0c3; --warn:#ffb85c; --bad:#ff7a7a; --good:#5fd39a;
+  --shadow:0 10px 40px rgba(0,0,0,.35); --r:22px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f5f5f7; --bg2:#ffffff; --card:#ffffff; --card2:#f2f3f6; --line:rgba(0,0,0,.08);
+    --text:#1d1d1f; --muted:#6e6e73; --accent:#0a6cdc; --accent2:#0f9b75; --warn:#b86a00; --bad:#c9302c; --good:#1d8a52;
+    --shadow:0 10px 30px rgba(0,0,0,.07);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.reveal{animation:fadeInUp .6s ease-out both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+@media (prefers-reduced-motion: reduce){.reveal{animation:none;opacity:1;transform:none}}
+
+/* hero */
+header.hero{padding:64px 0 28px;text-align:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.025em;margin:18px 0 14px;font-weight:700}
+.lead{color:var(--muted);font-size:clamp(17px,2.2vw,20px);max-width:680px;margin:0 auto}
+.conds{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 0;padding:0;list-style:none}
+.conds li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:15px;font-weight:500}
+.jump{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:620px;margin:28px auto 0}
+.jump a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:16px;text-decoration:none;font-weight:600;background:var(--card);border:1px solid var(--line);color:var(--text);transition:border-color .2s,background .2s}
+.jump a:hover{border-color:var(--accent)}
+.jump a:focus-visible,.btn:focus-visible,.thumbs button:focus-visible,.lb button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-top:8px;padding-bottom:8px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;padding:10px 14px;border-radius:999px;min-height:44px;display:flex;align-items:center}
+nav.toc a:hover{color:var(--text);background:var(--card)}
+
+section{padding:44px 0 8px;scroll-margin-top:64px}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.15;margin:0 0 18px}
+h3{font-size:19px;letter-spacing:-.01em;margin:26px 0 10px}
+
+/* product */
+.product{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.p-top{display:grid;grid-template-columns:1.05fr 1fr;gap:0}
+@media (max-width:820px){.p-top{grid-template-columns:1fr}}
+.gallery{background:var(--card2);padding:16px;display:flex;flex-direction:column;gap:10px}
+.main-img{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1/1;background:#ddd;cursor:zoom-in;border:0;padding:0;width:100%;display:block}
+.main-img img{width:100%;height:100%;object-fit:cover;display:block}
+.zoom-hint{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.55);color:#fff;font-size:13px;padding:6px 10px;border-radius:999px;pointer-events:none}
+.thumbs{display:flex;gap:10px}
+.thumbs button{flex:1;border:2px solid transparent;border-radius:14px;padding:0;overflow:hidden;background:none;cursor:pointer;aspect-ratio:16/10;min-height:64px}
+.thumbs button[aria-pressed="true"]{border-color:var(--accent)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.credit{font-size:12px;color:var(--muted);margin:2px 2px 0}
+.p-info{padding:28px 28px 24px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
+.badge.gold{background:color-mix(in srgb,#f5c542 20%,transparent);color:color-mix(in srgb,#f5c542 75%,var(--text))}
+.badge.silver{background:color-mix(in srgb,#b8c2cc 22%,transparent);color:var(--text)}
+.p-info h2{margin:14px 0 8px}
+.how{color:var(--muted);margin:0 0 18px}
+.keys{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.keys li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;background:var(--card2);border-radius:14px;padding:12px 14px}
+.ok{color:var(--good);font-weight:700}.mid{color:var(--warn);font-weight:700}
+.price{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.price div{flex:1 1 140px;background:var(--card2);border-radius:14px;padding:12px 14px}
+.price b{display:block;font-size:22px;letter-spacing:-.01em}
+.price span{font-size:13px;color:var(--muted)}
+.p-body{padding:4px 28px 28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:820px){.p-body{grid-template-columns:1fr;padding:4px 18px 22px}.p-info{padding:22px 18px}}
+.box{background:var(--card2);border-radius:18px;padding:18px 20px}
+.box h3{margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.box ul{margin:0;padding-left:20px}
+.box li{margin:6px 0}
+.box.plus h3{color:var(--good)}.box.minus h3{color:var(--bad)}
+.box.wide{grid-column:1/-1}
+.ico{width:20px;height:20px;flex:none}
+.note{font-size:14px;color:var(--muted)}
+
+/* table */
+.tbl-wrap{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--card2);font-size:14px}
+tbody th{font-weight:600;color:var(--muted);width:30%}
+tr:last-child th,tr:last-child td{border-bottom:0}
+td.win{color:var(--good);font-weight:600}
+@media (max-width:640px){
+  table,thead,tbody,tr,th,td{display:block}
+  thead{display:none}
+  tbody tr{padding:12px 16px;border-bottom:1px solid var(--line)}
+  tbody th{width:auto;padding:0 0 6px;border:0;color:var(--text)}
+  tbody td{border:0;padding:4px 0;display:flex;gap:10px}
+  tbody td::before{content:attr(data-l);color:var(--muted);flex:0 0 112px;font-size:13px;padding-top:2px}
+}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:820px){.grid3{grid-template-columns:1fr}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+.tile h3{margin:0 0 8px}
+.tile p{margin:0;color:var(--muted)}
+.calc{margin-top:14px;background:var(--card);border:1px dashed var(--line);border-radius:18px;padding:16px 20px;font-size:15px}
+.calc code{font:inherit;font-variant-numeric:tabular-nums}
+
+.verdict{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:820px){.verdict{grid-template-columns:1fr}}
+.v{border-radius:22px;padding:22px;border:1px solid var(--line);background:var(--card)}
+.v.top{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 16%,var(--card)),var(--card));border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+.v h3{margin:0 0 8px}
+.v p{margin:0}
+.h-with-sticker{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sticker{width:104px;height:104px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 6px 20px rgba(0,0,0,.25);transform:rotate(-6deg);flex:none}
+
+footer{padding:48px 0 60px;color:var(--muted);font-size:14px}
+footer ol{padding-left:20px}
+footer li{margin:4px 0;word-break:break-word}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:16px}
+.lb.open{display:flex}
+.lb img{max-width:min(1100px,100%);max-height:84vh;border-radius:14px;object-fit:contain}
+.lb button{position:absolute;width:56px;height:56px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:28px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{background:rgba(255,255,255,.26)}
+.lb .close{top:16px;right:16px}
+.lb .prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb .next{right:16px;top:50%;transform:translateY(-50%)}
+.lb .count{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Сравнение · октябрь 2026</span>
+    <h1 class="reveal d1">Две системы<br>охлаждения кровати</h1>
+    <p class="lead reveal d2">Подобраны под ваши главные условия. Обе системы гоняют охлаждённую или подогретую воду через тонкий чехол на матрасе.</p>
+    <ul class="conds reveal d3">
+      <li>🌡 У каждого своя температура</li>
+      <li>📦 Компактность</li>
+      <li>❄️ Охлаждение ниже комнатной</li>
+    </ul>
+    <div class="jump reveal d3">
+      <a class="btn" href="#eight">🥇 Eight Sleep Pod 6</a>
+      <a class="btn" href="#navien">🥈 Navien OptiSleep</a>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Разделы">
+  <div class="wrap">
+    <a href="#eight">Eight Sleep</a>
+    <a href="#navien">Navien</a>
+    <a href="#compare">Сравнение</a>
+    <a href="#brazil">Ввоз в Бразилию</a>
+    <a href="#verdict">Вывод</a>
+    <a href="#sources">Источники</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ EIGHT SLEEP ============ -->
+<section id="eight">
+<article class="product reveal">
+  <div class="p-top">
+    <div class="gallery" data-gallery="eight">
+      <button class="main-img" type="button" aria-label="Увеличить фото">
+        <img src="img/eight-hub.jpg" alt="Хаб Eight Sleep Pod 6 и свёрнутый чехол" width="670" height="640">
+        <span class="zoom-hint">🔍 Увеличить</span>
+      </button>
+      <div class="thumbs">
+        <button type="button" aria-pressed="true" data-src="img/eight-hub.jpg" data-alt="Хаб Eight Sleep Pod 6 и свёрнутый чехол"><img src="img/eight-hub.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="img/eight-bed.jpg" data-alt="Eight Sleep Pod 6 на кровати, хаб рядом с кроватью"><img src="img/eight-bed.jpg" alt="" loading="lazy"></button>
+      </div>
+      <p class="credit">Фото: eightsleep.com</p>
+    </div>
+    <div class="p-info">
+      <span class="badge gold">🥇 Лучший по вашим главным условиям</span>
+      <h2>Eight Sleep Pod 6</h2>
+      <p class="how">Хаб гоняет охлаждённую или подогретую воду через тонкий чехол на матрасе. Каждая сторона кровати охлаждается и греется независимо, оба человека подключены к одному хабу.</p>
+      <ul class="keys">
+        <li><span class="ok">✓</span><span><b>Две зоны:</b> да, у каждого своя температура.</span></li>
+        <li><span class="ok">✓</span><span><b>Компактность:</b> лучшая на рынке. Хаб 42×20×16,5 см и 6,9 кг, вдвое меньше прошлых моделей, помещается под большинство стандартных каркасов кровати. Под кроватью нужно около 25 см свободного пространства, так как прошлым хабам требовалось около 5 см зазора для воздуха. Чехол толщиной 2,5 см надевается на ваш матрас как простыня на резинке.</span></li>
+        <li><span class="ok">✓</span><span><b>Ниже комнаты:</b> да, сильнее всех: примерно от 12 до 43 °C.</span></li>
+      </ul>
+      <div class="price">
+        <div><b>$3.388</b><span>160×200 · 2.999 € в Германии</span></div>
+        <div><b>$3.614</b><span>180×200 · 3.199 € в Германии</span></div>
+      </div>
+      <p class="note">Пересчёт по курсу ЕЦБ на 01.10.2026: 1 € = $1,1298.</p>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="box plus"><h3>Плюсы</h3><ul>
+      <li>Самое сильное охлаждение и нагрев.</li>
+      <li>Лучший трекинг сна на рынке и автоматическая подстройка температуры по фазам сна (Autopilot).</li>
+      <li>Универсальное питание 120/240 В: работает в Рио и в любой стране без трансформатора.</li>
+      <li>Быстрый запуск: первичное заполнение водой около 5 минут.</li>
+    </ul></div>
+    <div class="box minus"><h3>Минусы</h3><ul>
+      <li>Подписка обязательна первый год (от $199 в год; в ЕС от 199 € ≈ $225). Для вас не критично.</li>
+      <li>В Бразилию не доставляют: нужно купить в США или ЕС и везти самим.</li>
+      <li>Дорого: для двоих в Германии $3.388–3.614. Налог при ввозе в Бразилию около $1.190–1.310 (<a href="#brazil">расчёт ниже</a>).</li>
+      <li>Модель совсем новая, и уже есть отдельные жалобы на протечку чехла и долгое ожидание поддержки. Сервиса в Бразилии нет.</li>
+    </ul></div>
+    <div class="box"><h3>💧 Уход</h3><ul>
+      <li>Примерно раз в пару месяцев приложение напоминает долить воду в бак.</li>
+      <li>Производитель рекомендует дистиллированную воду (можно водопроводную) и по возможности добавлять перекись водорода 3%.</li>
+    </ul></div>
+    <div class="box"><h3>🧳 Возить с собой: да, это самый удобный водяной вариант для поездок</h3><ul>
+      <li>Хаб весит 6,9 кг и помещается в обычный чемодан, чехол сворачивается в рулон.</li>
+      <li>Перед поездкой воду нужно обязательно слить из хаба и чехла специальным инструментом из комплекта.</li>
+      <li>Хаб завернуть в пупырчатую плёнку или убрать в оригинальную коробку.</li>
+      <li>На месте: надеть чехол, соединить шланги и кабель, залить воду, включить и подключить к Wi-Fi.</li>
+    </ul></div>
+  </div>
+</article>
+</section>
+
+<!-- ============ NAVIEN ============ -->
+<section id="navien">
+<article class="product reveal">
+  <div class="p-top">
+    <div class="gallery" data-gallery="navien">
+      <button class="main-img" type="button" aria-label="Увеличить фото">
+        <img src="img/navien-hub.jpg" alt="Хаб Navien OptiSleep SleepHub" width="1000" height="944">
+        <span class="zoom-hint">🔍 Увеличить</span>
+      </button>
+      <div class="thumbs">
+        <button type="button" aria-pressed="true" data-src="img/navien-hub.jpg" data-alt="Хаб Navien OptiSleep SleepHub"><img src="img/navien-hub.jpg" alt="" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="img/navien-bed.jpg" data-alt="Navien OptiSleep на кровати, хаб в ногах кровати"><img src="img/navien-bed.jpg" alt="" loading="lazy"></button>
+      </div>
+      <p class="credit">Фото: navienoptisleep.com</p>
+    </div>
+    <div class="p-info">
+      <span class="badge silver">🥈 Без подписки и дешевле</span>
+      <h2>Navien OptiSleep All Season Pro</h2>
+      <p class="how">Хаб гоняет охлаждённую или подогретую воду через тонкий наматрасник. Две независимые зоны от одного хаба (в размерах queen и king; full — однозонный).</p>
+      <ul class="keys">
+        <li><span class="ok">✓</span><span><b>Две зоны:</b> да.</span></li>
+        <li><span class="mid">~</span><span><b>Компактность:</b> средняя. Хаб около 31×20×33 см и 8 кг. Под кровать не убирается: его ставят в ногах кровати минимум в 30 см от стены и на одной высоте с наматрасником.</span></li>
+        <li><span class="ok">✓</span><span><b>Ниже комнаты:</b> да, минимум 18 °C, нагрев до 45 °C.</span></li>
+      </ul>
+      <div class="price">
+        <div><b>$1.699</b><span>Queen · по акции, обычная цена $1.999</span></div>
+        <div><b>$1.899</b><span>King · по акции, обычная цена $2.199</span></div>
+      </div>
+      <p class="note">Цены с navienoptisleep.com на 01.10.2026 (осенняя скидка $300).</p>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="box plus"><h3>Плюсы</h3><ul>
+      <li>Без подписки.</li>
+      <li>Тихий: по отзывам покупателей, тише домашнего кондиционера.</li>
+      <li>Приложение с расписаниями и режимом Auto по фазам сна.</li>
+      <li>Встроенная УФ-очистка воды, автослив, два стираемых чехла (летний и зимний).</li>
+      <li>Гарантия 5 лет на наматрасник и 2 года на хаб, 30 ночей на возврат.</li>
+      <li>Заметно дешевле: queen $1.699, налог при ввозе около $350.</li>
+    </ul></div>
+    <div class="box minus"><h3>Минусы</h3><ul>
+      <li>Хаб крупнее и стоит на виду.</li>
+      <li>Охлаждает слабее Eight Sleep (18 °C против примерно 12 °C).</li>
+      <li>Нет трекинга сна уровня Eight Sleep.</li>
+      <li>Модель вышла в июне 2026 года, долгосрочной статистики надёжности пока нет.</li>
+      <li>Продаётся только в США, сервиса в Бразилии нет.</li>
+    </ul></div>
+    <div class="box"><h3>💧 Уход</h3><ul>
+      <li>Раз в месяц слить и залить свежую воду через автослив.</li>
+      <li>Доливать воду, когда хаб пришлёт уведомление.</li>
+      <li>Чехлы стирать в холодной воде и сушить в расправленном виде.</li>
+    </ul></div>
+    <div class="box"><h3>🧳 Возить с собой: можно, но тяжелее</h3><ul>
+      <li>В комплекте набор для автослива, воздушный насос для продувки и сумка для наматрасника.</li>
+      <li>Перед поездкой: слить воду, продуть насосом, дать наматраснику просохнуть, иначе может появиться плесень.</li>
+      <li>Хаб весит около 8 кг, плюс наматрасник и чехлы — получается почти целый чемодан.</li>
+      <li>Питание только 120 В. Для Рио этого должно хватить (стоит уточнить у Navien), но в странах с сетью 220–240 В понадобится понижающий трансформатор.</li>
+    </ul></div>
+  </div>
+</article>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section id="compare">
+  <h2 class="reveal">Сравнение</h2>
+  <div class="tbl-wrap reveal">
+    <table>
+      <thead><tr><th></th><th>Eight Sleep Pod 6</th><th>Navien OptiSleep</th></tr></thead>
+      <tbody>
+        <tr><th>Две зоны</th><td data-l="Eight Sleep">✅ один хаб</td><td data-l="Navien">✅ один хаб</td></tr>
+        <tr><th>Хаб</th><td data-l="Eight Sleep" class="win">42×20×16,5 см, 6,9 кг</td><td data-l="Navien">~31×20×33 см, ~8 кг</td></tr>
+        <tr><th>Под кровать</th><td data-l="Eight Sleep" class="win">✅</td><td data-l="Navien">❌ в ногах кровати</td></tr>
+        <tr><th>Минимальная температура</th><td data-l="Eight Sleep" class="win">~12 °C</td><td data-l="Navien">18 °C</td></tr>
+        <tr><th>Максимальная температура</th><td data-l="Eight Sleep">~43 °C</td><td data-l="Navien" class="win">45 °C</td></tr>
+        <tr><th>Подписка</th><td data-l="Eight Sleep">обязательна первый год</td><td data-l="Navien" class="win">нет</td></tr>
+        <tr><th>Трекинг сна</th><td data-l="Eight Sleep" class="win">лучший на рынке</td><td data-l="Navien">базовый</td></tr>
+        <tr><th>Уход за водой</th><td data-l="Eight Sleep" class="win">долив раз в пару месяцев</td><td data-l="Navien">замена раз в месяц</td></tr>
+        <tr><th>Напряжение</th><td data-l="Eight Sleep" class="win">120/240 В</td><td data-l="Navien">120 В</td></tr>
+        <tr><th>Перевозка</th><td data-l="Eight Sleep" class="win">⭐⭐⭐</td><td data-l="Navien">⭐⭐</td></tr>
+        <tr><th>Цена для двоих</th><td data-l="Eight Sleep">~$3.388–3.614</td><td data-l="Navien" class="win">$1.699 (queen)</td></tr>
+        <tr><th>Налог при ввозе</th><td data-l="Eight Sleep">~$1.190–1.310</td><td data-l="Navien" class="win">~$350</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ BRAZIL ============ -->
+<section id="brazil">
+  <h2 class="reveal">Покупка и ввоз в Бразилию</h2>
+  <p class="note reveal" style="margin-top:-8px">Для обоих вариантов</p>
+  <div class="grid3">
+    <div class="tile reveal"><h3>🧳 В багаже</h3><p>Без налога можно ввезти вещей на сумму до $1.000 на человека при прилёте. Квоты двух человек суммировать нельзя, с суммы сверх квоты берут налог 50%. Сумму сверх квоты обязательно декларировать, иначе к налогу добавится штраф ещё 50%.</p></div>
+    <div class="tile reveal d1"><h3>📦 Доставка в Рио</h3><p>Пошлина 60% плюс налог штата ICMS 20% примерно удваивают цену, поэтому доставка невыгодна.</p></div>
+    <div class="tile reveal d2"><h3>🛠 Гарантия</h3><p>Ни у одной из систем нет сервиса в Бразилии. При поломке придётся отправлять устройство за границу.</p></div>
+  </div>
+  <div class="calc reveal">
+    <b>Как посчитан налог в багаже</b> (50% от суммы сверх $1.000):<br>
+    Eight Sleep 160×200: <code>($3.388 − $1.000) × 50% ≈ $1.194</code><br>
+    Eight Sleep 180×200: <code>($3.614 − $1.000) × 50% ≈ $1.307</code><br>
+    Navien queen: <code>($1.699 − $1.000) × 50% ≈ $350</code>
+  </div>
+</section>
+
+<!-- ============ VERDICT ============ -->
+<section id="verdict">
+  <div class="h-with-sticker">
+    <h2 class="reveal" style="margin:0">Вывод</h2>
+    <img class="sticker" id="sticker" src="img/sticker-cat.jpg" alt="Милый котик спит, свернувшись клубочком на кровати" width="104" height="104">
+  </div>
+  <div class="verdict" style="margin-top:20px">
+    <div class="v top reveal"><h3>🥇 Eight Sleep Pod 6</h3><p>Лучше всего подходит под ваши главные условия: самый компактный хаб помещается под кровать, у каждого своя сторона, охлаждает сильнее всех, работает при любом напряжении и удобнее всего для поездок. Он дороже, и первый год нужна подписка.</p></div>
+    <div class="v reveal d1"><h3>🥈 Navien OptiSleep</h3><p>Разумная альтернатива, если хочется без подписки и заметно дешевле. Взамен он охлаждает слабее, его хаб стоит на виду, а возить его тяжелее.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer id="sources">
+  <div class="wrap">
+    <h3 style="color:var(--text)">Источники и примечания</h3>
+    <ol>
+      <li>Eight Sleep Pod 6: <a href="https://www.eightsleep.com/product/pod-cover/" target="_blank" rel="noopener">eightsleep.com/product/pod-cover</a>; цены в Германии и характеристики хаба: <a href="https://www.eightsleep.com/de/product/pod-cover/" target="_blank" rel="noopener">eightsleep.com/de</a>.</li>
+      <li>Navien OptiSleep All Season Pro: <a href="https://www.navienoptisleep.com/products/navien-optisleep-pro" target="_blank" rel="noopener">navienoptisleep.com</a>; анонс: <a href="https://www.navieninc.com/news/press-releases/navien-optisleep-new-all-season-pro-mattress-pad" target="_blank" rel="noopener">navieninc.com</a>.</li>
+      <li>Курс евро: <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">ЕЦБ, 01.10.2026</a>: 1 € = $1,1298.</li>
+      <li>Фото товаров — с официальных сайтов производителей. Стикер: «Tippy sleeping», автор Miamistill, <a href="https://commons.wikimedia.org/wiki/File:Tippy_sleeping.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 4.0 (обрезано).</li>
+    </ol>
+    <p>Цены и акции меняются — перед покупкой проверьте на сайтах производителей.</p>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="close" type="button" aria-label="Закрыть">✕</button>
+  <button class="prev" type="button" aria-label="Предыдущее фото">‹</button>
+  <img alt="">
+  <button class="next" type="button" aria-label="Следующее фото">›</button>
+  <div class="count"></div>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),cnt=lb.querySelector('.count'),list=[],idx=0,lastFocus=null;
+  function show(i){idx=(i+list.length)%list.length;lbImg.src=list[idx].src;lbImg.alt=list[idx].alt;cnt.textContent=(idx+1)+' / '+list.length;}
+  function open(items,i){list=items;lastFocus=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.close').focus();}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  document.querySelectorAll('.gallery').forEach(function(g){
+    var main=g.querySelector('.main-img'),mainImg=main.querySelector('img'),btns=[].slice.call(g.querySelectorAll('.thumbs button'));
+    var items=btns.map(function(b){return{src:b.dataset.src,alt:b.dataset.alt};}),cur=0;
+    btns.forEach(function(b,i){b.addEventListener('click',function(){cur=i;mainImg.src=b.dataset.src;mainImg.alt=b.dataset.alt;btns.forEach(function(x,j){x.setAttribute('aria-pressed',j===i?'true':'false');});});});
+    main.addEventListener('click',function(){open(items,cur);});
+  });
+  lb.querySelector('.close').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+  lb.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);});
+})();
+</script>
+<script type="module">
+  // Framer Motion (motion) — только дополнительные микроанимации, видимость контента от них не зависит
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    import("https://cdn.jsdelivr.net/npm/motion@11/+esm").then(({ animate }) => {
+      const press = (el, s) => animate(el, { scale: s }, { type: "spring", stiffness: 400, damping: 22 });
+      document.querySelectorAll('.btn, .thumbs button, .main-img').forEach(el => {
+        el.addEventListener('pointerenter', () => press(el, 1.02));
+        el.addEventListener('pointerleave', () => press(el, 1));
+        el.addEventListener('pointerdown', () => press(el, .97));
+        el.addEventListener('pointerup', () => press(el, 1.02));
+      });
+      const st = document.getElementById('sticker');
+      const wiggle = () => animate(st, { rotate: [-6, 6, -4, 2, -6] }, { duration: .8 });
+      st.addEventListener('pointerenter', wiggle);
+      st.addEventListener('click', wiggle);
+    }).catch(() => {});
+  }
+</script>
+</body>
+</html>
