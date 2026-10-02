@@ -137,6 +137,11 @@ footer li{margin:4px 0;word-break:break-word}
 .lb .prev{left:16px;top:50%;transform:translateY(-50%)}
 .lb .next{right:16px;top:50%;transform:translateY(-50%)}
 .lb .count{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:14px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:820px){.why{grid-template-columns:1fr}}
+.why .tile.yes{border-color:color-mix(in srgb,var(--good) 40%,transparent)}
+.why .tile.no{border-color:color-mix(in srgb,var(--bad) 35%,transparent)}
+.why .tile p{color:var(--text)}
 </style>
 </head>
 <body>
@@ -160,6 +165,7 @@ footer li{margin:4px 0;word-break:break-word}
 
 <nav class="toc" aria-label="Разделы">
   <div class="wrap">
+    <a href="#why">Почему водяная</a>
     <a href="#eight">Eight Sleep</a>
     <a href="#navien">Navien</a>
     <a href="#compare">Сравнение</a>
@@ -169,6 +175,15 @@ footer li{margin:4px 0;word-break:break-word}
 </nav>
 
 <main class="wrap">
+
+<!-- ============ WHY WATER ============ -->
+<section id="why">
+  <h2 class="reveal">Почему именно водяная система</h2>
+  <div class="why">
+    <div class="tile no reveal"><h3>❌ Воздушные (например, BedJet)</h3><p>Своего охлаждающего блока у них нет: вентилятор просто задувает под одеяло воздух из комнаты. Поэтому кровать не станет холоднее комнаты. Чтобы было прохладнее, всё равно нужно охлаждать саму комнату кондиционером.</p></div>
+    <div class="tile yes reveal d1"><h3>✅ Водяные (Eight Sleep, Navien)</h3><p>Хаб сам охлаждает воду и гоняет её через чехол на матрасе. Так кровать становится холоднее комнатной температуры без кондиционера, и у каждого своя температура.</p></div>
+  </div>
+</section>
 
 <!-- ============ EIGHT SLEEP ============ -->
 <section id="eight">
